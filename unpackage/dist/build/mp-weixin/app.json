@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/write/write",
+    "pages/my/my",
+    "pages/detail/detail",
+    "pages/login/login",
+    "pages/image/image"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "登❤元",
+    "navigationBarBackgroundColor": "#F09346",
+    "backgroundColor": "#F09346",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#F09346",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/index.png",
+        "selectedIconPath": "static/index-select.png"
+      },
+      {
+        "pagePath": "pages/image/image",
+        "text": "图片",
+        "iconPath": "static/image.png",
+        "selectedIconPath": "static/image-select.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "static/my.png",
+        "selectedIconPath": "static/my-select.png"
+      }
+    ]
+  },
+  "permission": {},
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
+}
