@@ -7,6 +7,7 @@
 </template>
 
 <script>
+	var sign = require('../../common/sign.js');
 	var _self, _options, openid, session_key;
 	export default {
 		data() {
@@ -16,13 +17,14 @@
 		},
 						
 		onLoad(options) {
-			
-			var _self = this;
+			sign.sign(this.apiServer)
+			 _self = this;
+			 _options = options;
+			console.log(_options)
 			//#ifdef MP-WEIXIN
 				uni.login({
 					success(res) {
 						console.log(res); //res.code---openid
-						
 						uni.request({
 							url:_self.apiServer+'/login/getOpenId',
 							data: {
@@ -32,14 +34,13 @@
 								console.log(infoRes.data.openid)
 								openid = infoRes.data.openid;
 								session_key = infoRes.data.session_key;
-								console.log(options)
+								console.log(_options)
 		
 							}
 						})
 					}
 				})
 			//#endif
-			var _options = options;
 			// #ifdef APP-PLUS
 				uni.login({
 				  provider: 'weixin',
@@ -101,6 +102,8 @@
 			getUserInfo:(userInfo)=>{
 				var _userInfo = userInfo.detail.userInfo;
 				console.log(_userInfo)
+				console.log(openid)
+				console.log(_options)
 				uni.request({
 					url: 'https://www.cliyun.cn/index.php/login/index', //仅为示例，并非真实接口地址。
 					data: {
@@ -111,14 +114,14 @@
 					method:'POST',
 					header: {'content-type' : "application/x-www-form-urlencoded"},
 					success: (res) => {
-						console.log(res)
 						if(res.data.code == 'ok'){
 							uni.showToast({title:"登录成功"});
 							uni.setStorageSync('SUID',res.data.data.id);
 							uni.setStorageSync('SNAME',res.data.data.uname);
-							uni.setStorageSync('SRAND',res.data.data.radnom);
+							uni.setStorageSync('SRAND',res.data.data.random);
 							uni.setStorageSync('SFACE',res.data.data.face);
 							console.log(res.data)
+							
 							if(_options.backtype == 1){
 								uni.redirectTo({
 									url:_options.backpage,
