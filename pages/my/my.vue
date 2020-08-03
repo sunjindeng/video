@@ -17,6 +17,11 @@
 				<view>视频</view>
 			</view>
 		</view>
+		<view class="img-list">
+			<view>
+				照片
+			</view>
+		</view>
 	</view> 
 	
 </template>
@@ -104,5 +109,10 @@
 		color: #ccc;
 		font-size:26rpx;
 		margin-top: 30rpx;
+	}
+	.img-list{
+		width: 700rpx;
+		height: 700rpx;
+		border: #007AFF 2rpx solid;
 	}
 </style>

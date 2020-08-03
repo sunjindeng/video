@@ -6,7 +6,7 @@
 		</view>
 		<view> -->
 			<!-- <image src="http://js.cliyun.cn/static/image/wife/wife.jpg" mode="widthFix" class='image'> -->
-			<image src="http://js.cliyun.cn/static/image/wife/wife1.jpg" mode="widthFix" class="image">
+			<!-- <image src="http://js.cliyun.cn/static/image/wife/wife1.jpg" mode="widthFix" class="image"> -->
 			<image src="../../static/parrot3.jpg" mode="widthFix" class='image'>
 			<image src="../../static/yang.jpg" mode="widthFix" class="image">
 			

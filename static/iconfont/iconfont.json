@@ -1,0 +1,16 @@
+{
+  "id": "1982469",
+  "name": "jianshu",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "11206770",
+      "name": "图片",
+      "font_class": "images",
+      "unicode": "ea37",
+      "unicode_decimal": 59959
+    }
+  ]
+}

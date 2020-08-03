@@ -1,0 +1,14 @@
+<view class="w-100">
+	<view class="w-100 flex_wrap">
+		<view class="imgs-view" wx:for="{{imgArray}}" wx:for-item="v" wx:for-index="i" wx:key="{{i}}">
+			<image bindtap="preview" data-value="{{v}}" data-i="{{i}}" src="{{v}}"></image>
+			<view class="del-btn" bindtap="delImg" data-i="{{i}}">
+				<image src="delete.png"></image>
+			</view>
+		</view>
+		<view wx:if="{{imgArray.length<imgCount}}" class="upload-img-view flex_xy_center" bindtap="upPhoto">
+			<image src="jia.png"></image>
+		</view>
+	</view>
+	<view wx:if="{{!closeTip}}" class="tip">* 最多上传{{imgCount}}张图片(<label> {{imgArray.length}} </label>/{{imgCount}})，单张大小为<label>{{imgSize}}</label>M</view>
+</view>

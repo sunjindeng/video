@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App'
 
 Vue.config.productionTip = false
+import './static/iconfont/iconfont.css';
 Vue.prototype.checklogin = function(backpage,backtype){
 	var SUID = uni.getStorageSync('SUID');
 	var SRAND = uni.getStorageSync('SRAND');
